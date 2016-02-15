@@ -9,12 +9,21 @@ namespace HSN_SisikaryakanHR
     public class Manager:Employee
     {
         protected string department
-        { get; set; }
+        { get; set; }        
 
-        public Manager() : base()
+        private int _supervisorNumber = 0;
+        protected int ssupervisorNumber
         {
-            this.department = "<tbd>";
+            get
+            {
+                return _supervisorNumber;
+            }
+            set
+            {
+                _supervisorNumber = value;
+            }
         }
+        protected Supervisor[] arrSupervisor = new Supervisor[3];
 
         protected string allowanceType //staff + spv. + THR & Medical
         { get; set; }        
@@ -28,8 +37,19 @@ namespace HSN_SisikaryakanHR
         protected int comparativeStudyFee
         { get; set; }
 
+        #region Method
+        public void addSpv(Supervisor spv)
+        {
+            arrSupervisor[_supervisorNumber] = spv;
+            _supervisorNumber++;
+        }
+        #endregion
 
         #region Constructor
+        public Manager() : base()
+        {
+            this.department = "<tbd>";
+        }
         public Manager(string name, string gender, string department) : base()
         {
             this.basicSalary = 10000000;
