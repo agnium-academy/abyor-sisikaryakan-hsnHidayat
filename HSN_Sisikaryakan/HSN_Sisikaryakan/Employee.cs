@@ -8,18 +8,18 @@ namespace HSN_SisikaryakanHR
 {
     public class Employee
     {
-        //private int _employeeNumber = 0;
-        //protected int employeeNumber
-        //{
-        //    get
-        //    {
-        //        return _employeeNumber;
-        //    }
-        //    set
-        //    {
-        //        _employeeNumber = value;
-        //    }
-        //} 
+        private int _employeeNumber = 0;
+        protected int employeeNumber
+        {
+            get
+            {
+                return _employeeNumber;
+            }
+            set
+            {
+                _employeeNumber = value;
+            }
+        }
         protected string entryDate
         { get; set; }
 
@@ -41,18 +41,20 @@ namespace HSN_SisikaryakanHR
         protected int totalSalary
         { get; set; }
 
+
+        #region Method
         protected void entryLayoffInfo()
         {
             this.entryDate = "February, 15 2016";
             this.layoffDate = "-";
             this.employeeStatus = "ACTIVE";
-            //_employeeNumber++;
+            _employeeNumber++;
         }
 
         protected virtual void entryLayoffInfo(string _entryDate)
         {
             this.entryDate = _entryDate;
-            //_employeeNumber++;
+            _employeeNumber++;
         }
 
         protected virtual void entryLayoffInfo(string _entryDate, string _layoffDate)
@@ -60,8 +62,10 @@ namespace HSN_SisikaryakanHR
             this.entryDate = _entryDate;
             this.layoffDate = _entryDate;
             this.employeeStatus = "INACTIVE";
-        }
+        }        
+        #endregion
 
+        #region Constructor
         public Employee()
         {
             this.name = "anonymous";
@@ -77,6 +81,6 @@ namespace HSN_SisikaryakanHR
             this.basicSalary = 0;
             this.employeeStatus = "?";
         }
-
+        #endregion
     }
 }
