@@ -56,6 +56,14 @@ namespace HSN_SisikaryakanHR
             this.department = department;
         }
 
+        public Manager(string name, string gender, string department, string allowanceType, int allowanceFee) : base()
+        {
+            this.basicSalary = 10000000;
+            this.department = department;
+            this.allowanceType = allowanceType;
+            this.allowanceFee = allowanceFee;            
+        }
+
         public Manager(string name, string gender, string department, string allowanceType, int allowanceFee, string comparativeStudyName, int comparativeStudyFee) : base()
         {
             this.basicSalary = 10000000;

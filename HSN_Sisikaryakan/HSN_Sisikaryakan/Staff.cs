@@ -42,6 +42,15 @@ namespace HSN_SisikaryakanHR
             this.location = location;
         }
 
+        public Staff(string name, string gender, string department, string location, string allowanceType, int allowanceFee) : base()
+        {
+            this.basicSalary = 4000000;
+            this.department = department;
+            this.location = location;
+            this.allowanceType = allowanceType;
+            this.allowanceFee = allowanceFee;
+        }
+
         public Staff(string name, string gender, string department, string location, string training, string assignmentProject, string allowanceType, int allowanceFee) : base()
         {
             this.basicSalary = 4000000;

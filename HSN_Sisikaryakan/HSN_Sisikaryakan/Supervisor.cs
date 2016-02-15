@@ -49,10 +49,11 @@ namespace HSN_SisikaryakanHR
             this.department = "<tbd>";
         }
 
-        public Supervisor(string name, string gender, string department) : base()
+        public Supervisor(string name, string gender, string department, string location) : base()
         {
             this.basicSalary = 7000000;
             this.department = department;
+            this.location = location;
         }
 
         public Supervisor(string name, string gender, string department, string location, string allowanceType, int allowanceFee) : base()
