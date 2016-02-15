@@ -46,13 +46,13 @@ namespace HSN_SisikaryakanHR
             this.entryDate = "February, 15 2016";
             this.layoffDate = "-";
             this.employeeStatus = "ACTIVE";
-            _employeeNumber++;
+            //_employeeNumber++;
         }
 
         protected virtual void entryLayoffInfo(string _entryDate)
         {
             this.entryDate = _entryDate;
-            _employeeNumber++;
+            //_employeeNumber++;
         }
 
         protected virtual void entryLayoffInfo(string _entryDate, string _layoffDate)
