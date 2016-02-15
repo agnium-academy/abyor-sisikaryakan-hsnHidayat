@@ -13,30 +13,53 @@ namespace HSN_SisikaryakanHR
 
         protected string location
         { get; set; }
-
-        public Supervisor() : base()
-        {
-            this.department = "<tbd>";
-        }
-
+        
         protected string allowanceType //staff + spv. + THR & Medical
         { get; set; }
 
         protected int allowanceFee
         { get; set; }
 
+        private int _staffNumber = 0;
+        protected int staffNumber
+        {
+            get
+            {
+                return _staffNumber;
+            }
+            set
+            {
+                _staffNumber = value;
+            }
+        }
+        protected Staff[] arrStaf = new Staff[5];
+
+        #region Method
+        public void addStaff(Staff stf)
+        {
+            arrStaf[_staffNumber] = stf;
+            _staffNumber++;
+        }
+        #endregion
+
 
         #region Constructor
-        public Supervisor(string name, string gender, string department) : base()
+        public Supervisor() : base()
         {
-            this.basicSalary = 10000000;
-            this.department = department;
+            this.department = "<tbd>";
         }
 
-        public Supervisor(string name, string gender, string department, string allowanceType, int allowanceFee) : base()
+        public Supervisor(string name, string gender, string department) : base()
         {
             this.basicSalary = 7000000;
             this.department = department;
+        }
+
+        public Supervisor(string name, string gender, string department, string location, string allowanceType, int allowanceFee) : base()
+        {
+            this.basicSalary = 7000000;
+            this.department = department;
+            this.location = location;
             this.allowanceType = allowanceType;
             this.allowanceFee = allowanceFee;
         }
