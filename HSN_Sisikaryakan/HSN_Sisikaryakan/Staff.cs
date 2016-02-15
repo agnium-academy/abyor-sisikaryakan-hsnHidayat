@@ -27,6 +27,21 @@ namespace HSN_SisikaryakanHR
         { get; set; }
 
 
+        private String[] nimMHS;
+        private int JmlMahasiswa; //need get set
+        public void setNimMahasiswa(String nimMhs)
+        {
+            if (JmlMahasiswa < 5)
+            {
+                nimMHS[JmlMahasiswa] = nimMhs;
+                JmlMahasiswa++;
+            }
+        }
+        public String getmahasiswa(int i)
+        {
+            return (nimMHS[i]);
+        }
+
         #region Constructor
         public Staff() : base()
         {

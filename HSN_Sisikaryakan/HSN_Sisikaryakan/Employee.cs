@@ -8,6 +8,18 @@ namespace HSN_SisikaryakanHR
 {
     public class Employee
     {
+        private int _employeeNumber = 0;
+        protected int employeeNumber
+        {
+            get
+            {
+                return _employeeNumber;
+            }
+            set
+            {
+                _employeeNumber = value;
+            }
+        } 
         protected string entryDate
         { get; set; }
 
@@ -34,11 +46,13 @@ namespace HSN_SisikaryakanHR
             this.entryDate = "February, 15 2016";
             this.layoffDate = "-";
             this.employeeStatus = "ACTIVE";
+            _employeeNumber++;
         }
 
         protected void entryLayoffInfo(string _entryDate)
         {
             this.entryDate = _entryDate;
+            _employeeNumber++;
         }
 
         protected void entryLayoffInfo(string _entryDate, string _layoffDate)
@@ -53,6 +67,7 @@ namespace HSN_SisikaryakanHR
             this.name = "anonymous";
             this.gender = "?";
             this.basicSalary = 0;
+            this.employeeStatus = "?";
         }
 
         public Employee(string name, string gender)
@@ -60,6 +75,7 @@ namespace HSN_SisikaryakanHR
             this.name = name;
             this.gender = gender;
             this.basicSalary = 0;
+            this.employeeStatus = "?";
         }
 
     }
