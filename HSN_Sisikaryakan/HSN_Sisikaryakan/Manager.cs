@@ -22,6 +22,12 @@ namespace HSN_SisikaryakanHR
         protected int allowanceFee
         { get; set; }
 
+        protected string comparativeStudyName //staff + spv. + THR & Medical
+        { get; set; }
+
+        protected int comparativeStudyFee
+        { get; set; }
+
 
         #region Constructor
         public Manager(string name, string gender, string department) : base()
@@ -30,12 +36,14 @@ namespace HSN_SisikaryakanHR
             this.department = department;
         }
 
-        public Manager(string name, string gender, string department, string allowanceType, int allowanceFee) : base()
+        public Manager(string name, string gender, string department, string allowanceType, int allowanceFee, string comparativeStudyName, int comparativeStudyFee) : base()
         {
             this.basicSalary = 10000000;
             this.department = department;
             this.allowanceType = allowanceType;
             this.allowanceFee = allowanceFee;
+            this.comparativeStudyName = comparativeStudyName;
+            this.comparativeStudyFee = comparativeStudyFee;
         }
         #endregion
     }
