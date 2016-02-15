@@ -51,13 +51,13 @@ namespace HSN_SisikaryakanHR
             _employeeNumber++;
         }
 
-        protected virtual void entryLayoffInfo(string _entryDate)
+        public virtual void entryLayoffInfo(string _entryDate)
         {
             this.entryDate = _entryDate;
             _employeeNumber++;
         }
 
-        protected virtual void entryLayoffInfo(string _entryDate, string _layoffDate)
+        public virtual void entryLayoffInfo(string _entryDate, string _layoffDate)
         {
             this.entryDate = _entryDate;
             this.layoffDate = _entryDate;

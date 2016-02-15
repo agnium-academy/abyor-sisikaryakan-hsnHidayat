@@ -12,6 +12,7 @@ namespace HSN_SisikaryakanHR
         { get; set; }        
 
         private int _supervisorNumber = 0;
+        private int _staffNumber = 0;
         protected int ssupervisorNumber
         {
             get
@@ -24,6 +25,7 @@ namespace HSN_SisikaryakanHR
             }
         }
         protected Supervisor[] arrSupervisor = new Supervisor[3];
+        protected Staff[] arrStaf = new Staff[5];
 
         protected string allowanceType //staff + spv. + THR & Medical
         { get; set; }        
@@ -42,6 +44,25 @@ namespace HSN_SisikaryakanHR
         {
             arrSupervisor[_supervisorNumber] = spv;
             _supervisorNumber++;
+        }
+
+        public void addStaff(Staff stf)
+        {
+            arrStaf[_staffNumber] = stf;
+            _staffNumber++;
+        }
+
+        public override void entryLayoffInfo(string _entryDate)
+        {
+            this.entryDate = _entryDate;
+            //_employeeNumber++;
+        }
+
+        public override void entryLayoffInfo(string _entryDate, string _layoffDate)
+        {
+            this.entryDate = _entryDate;
+            this.layoffDate = _entryDate;
+            this.employeeStatus = "INACTIVE";
         }
         #endregion
 

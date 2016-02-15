@@ -40,6 +40,19 @@ namespace HSN_SisikaryakanHR
             arrStaf[_staffNumber] = stf;
             _staffNumber++;
         }
+
+        public override void entryLayoffInfo(string _entryDate)
+        {
+            this.entryDate = _entryDate;
+            //_employeeNumber++;
+        }
+
+        public override void entryLayoffInfo(string _entryDate, string _layoffDate)
+        {
+            this.entryDate = _entryDate;
+            this.layoffDate = _entryDate;
+            this.employeeStatus = "INACTIVE";
+        }
         #endregion
 
 
