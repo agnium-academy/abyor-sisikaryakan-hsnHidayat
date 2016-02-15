@@ -26,6 +26,9 @@ namespace HSN_SisikaryakanHR
         protected int allowanceFee
         { get; set; }
 
+        //private int _numberStaff = 0;
+        //protected String[] arrStaffname;
+
         #region Constructor
         public Staff() : base()
         {
@@ -49,6 +52,13 @@ namespace HSN_SisikaryakanHR
             this.allowanceType = allowanceType;
             this.allowanceFee = allowanceFee;
         }
+        #endregion
+
+        #region Method
+        //public String getStaff(int _numberStaff)
+        //{
+        //    return (arrStaffname[_numberStaff]);
+        //}
         #endregion
     }
 }

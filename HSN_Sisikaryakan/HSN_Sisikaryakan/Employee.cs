@@ -8,18 +8,18 @@ namespace HSN_SisikaryakanHR
 {
     public class Employee
     {
-        private int _employeeNumber = 0;
-        protected int employeeNumber
-        {
-            get
-            {
-                return _employeeNumber;
-            }
-            set
-            {
-                _employeeNumber = value;
-            }
-        } 
+        //private int _employeeNumber = 0;
+        //protected int employeeNumber
+        //{
+        //    get
+        //    {
+        //        return _employeeNumber;
+        //    }
+        //    set
+        //    {
+        //        _employeeNumber = value;
+        //    }
+        //} 
         protected string entryDate
         { get; set; }
 
@@ -49,13 +49,13 @@ namespace HSN_SisikaryakanHR
             _employeeNumber++;
         }
 
-        protected void entryLayoffInfo(string _entryDate)
+        protected virtual void entryLayoffInfo(string _entryDate)
         {
             this.entryDate = _entryDate;
             _employeeNumber++;
         }
 
-        protected void entryLayoffInfo(string _entryDate, string _layoffDate)
+        protected virtual void entryLayoffInfo(string _entryDate, string _layoffDate)
         {
             this.entryDate = _entryDate;
             this.layoffDate = _entryDate;
